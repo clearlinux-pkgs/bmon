@@ -1,0 +1,11 @@
+Configure miss: ncurses/ncurses.h usability
+Configure miss: ncurses/ncurses.h presence
+Configure miss: ncurses/ncurses.h
+Configure miss: netinet6/in6.h usability
+Configure miss: netinet6/in6.h presence
+Configure miss: netinet6/in6.h
+Configure miss: sysctl/ioctl.h usability
+Configure miss: sysctl/ioctl.h presence
+Configure miss: sysctl/ioctl.h
+Configure miss: working ncursesw/curses.h
+Configure miss: working ncursesw.h

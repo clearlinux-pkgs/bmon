@@ -1,0 +1,3 @@
+4.0
+pkgconfig(ncurses)
+pkgconfig(ncursesw)
