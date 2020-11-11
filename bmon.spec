@@ -4,7 +4,7 @@
 #
 Name     : bmon
 Version  : 4.0
-Release  : 1
+Release  : 2
 URL      : https://github.com/tgraf/bmon/releases/download/v4.0/bmon-4.0.tar.gz
 Source0  : https://github.com/tgraf/bmon/releases/download/v4.0/bmon-4.0.tar.gz
 Summary  : bandwidth monitor and rate estimator
@@ -67,14 +67,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1575323878
+export SOURCE_DATE_EPOCH=1605120232
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static
 make  %{?_smp_mflags}
@@ -84,10 +84,10 @@ export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make VERBOSE=1 V=1 %{?_smp_mflags} check
+make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1575323878
+export SOURCE_DATE_EPOCH=1605120232
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/bmon
 cp %{_builddir}/bmon-4.0/LICENSE.BSD %{buildroot}/usr/share/package-licenses/bmon/d0f83c8198fdd5464d2373015b7b64ce7cae607e
